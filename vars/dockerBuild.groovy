@@ -4,7 +4,7 @@ def call(String client, String server){
     passwordVariable: "dockerHubPass",
     usernameVariable: "dockerHubUser"
   )]){
-  sh "cd ${client} && docker build -t ${dockerHubUser}/${client} ."
-  sh "cd ${server} && docker build -t ${dockerHubUser}/${server} ."
+  sh "cd ${client} && docker build -t ${env.dockerHubUser}/${client} ."
+  sh "cd ${server} && docker build -t ${env.dockerHubUser}/${server} ."
   }
 }
