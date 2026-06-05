@@ -1,6 +1,6 @@
 def call(String client, String server){
   withCredentials([usernamePassword(
-    "credentialsId": "dockerHubCred",
+    "credentialsId": "dockerUserCred",
     passwordVariable: "dockerHubPass",
     usernameVariable: "dockerHubUser"
   )]){
